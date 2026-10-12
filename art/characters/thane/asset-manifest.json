@@ -1,0 +1,45 @@
+{
+  "asset": "thane",
+  "pipeline": "v5 anime (VRoid CC0 base)",
+  "generated": "2026-10-12T17:42:57",
+  "blender": "5.2.1 LTS",
+  "source": "C:/Users/User/PROJECTS/saber-duel/art/characters/thane/thane_anime_a3.blend",
+  "file": "public/models/thane.glb",
+  "bytes": 1191140,
+  "triangles": {
+    "GEO-thane_body": 2400,
+    "GEO-thane_costume": 21834
+  },
+  "triangles_total": 24234,
+  "materials": [
+    "MAT-thane_leather",
+    "MAT-thane_metal",
+    "MAT-thane_primary",
+    "MAT-thane_secondary",
+    "MAT-thane_trim"
+  ],
+  "morphs": {
+    "GEO-thane_body": [
+      "palmOpen"
+    ]
+  },
+  "armature_extras": {
+    "gripCentreN": [
+      0.0018,
+      -0.0432,
+      0.0043
+    ],
+    "gripCentreF": [
+      0.0018,
+      -0.0432,
+      -0.0043
+    ],
+    "gripRadius": 0.0215,
+    "gripAxis": "hand-local +z (game z at rest)"
+  },
+  "units": {
+    "up": "Y (glTF)",
+    "forward": "game +x",
+    "scale": 1.0
+  }
+}

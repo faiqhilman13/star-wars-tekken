@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Saber Duel Audio Preview</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0d1013;
+        --panel: #161b20;
+        --line: #2a323a;
+        --text: #dfe6ec;
+        --muted: #8a96a1;
+        --blue: #4fb6ff;
+        --red: #ff5a4f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 16px;
+        background: var(--bg);
+        color: var(--text);
+        font: 14px/1.4 system-ui, sans-serif;
+      }
+      h1 { font-size: 18px; margin: 0 0 12px; }
+      h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 8px; }
+      section {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 12px;
+      }
+      .row { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+      .buttons { display: flex; flex-wrap: wrap; gap: 6px; }
+      button {
+        background: #222a31;
+        color: var(--text);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 6px 10px;
+        font: inherit;
+        cursor: pointer;
+      }
+      button:hover { border-color: var(--blue); }
+      button.primary { background: #1d4a6b; border-color: var(--blue); }
+      label { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); }
+      output { color: var(--text); min-width: 3ch; display: inline-block; }
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        font: 12px/1.45 ui-monospace, monospace;
+        color: var(--text);
+      }
+      #status { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <h1>Saber Duel audio preview</h1>
+    <section>
+      <div class="row">
+        <button id="unlock" class="primary" type="button">Unlock audio</button>
+        <span id="status">locked</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Parameters</h2>
+      <div class="row">
+        <label>Fighter
+          <select id="fighter">
+            <option value="0">slot 0</option>
+            <option value="1">slot 1</option>
+          </select>
+        </label>
+        <label>slot 0 style
+          <select id="style0">
+            <option value="kael" selected>kael</option>
+            <option value="vexa">vexa</option>
+            <option value="asha">asha (dual)</option>
+            <option value="thane">thane (staff)</option>
+          </select>
+        </label>
+        <label>slot 1 style
+          <select id="style1">
+            <option value="kael">kael</option>
+            <option value="vexa" selected>vexa</option>
+            <option value="asha">asha (dual)</option>
+            <option value="thane">thane (staff)</option>
+          </select>
+        </label>
+        <label>x <input id="x" type="range" min="-9" max="9" step="0.1" value="0" /> <output id="x-out">0</output></label>
+        <label>strength <input id="strength" type="range" min="0" max="1" step="0.05" value="1" /> <output id="strength-out">1</output></label>
+        <label>round <input id="round" type="number" min="1" max="5" value="1" style="width: 4em" /></label>
+        <label>character <input id="char" type="number" min="0" max="3" value="0" style="width: 4em" /></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Continuous effects (called every frame)</h2>
+      <div class="row">
+        <label><input id="grip" type="checkbox" /> setGrip</label>
+        <label><input id="lightning" type="checkbox" /> setLightning</label>
+        <label><input id="spin" type="checkbox" /> setSpinningBlade (x sweeps like a boomerang)</label>
+        <label>spin speed <input id="spin-speed" type="range" min="0" max="1" step="0.05" value="0.5" /> <output id="spin-speed-out">0.5</output></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Saber hum (updateSaber every frame)</h2>
+      <div class="row">
+        <label><input id="on0" type="checkbox" /> slot 0 on</label>
+        <label><input id="on1" type="checkbox" /> slot 1 on</label>
+        <label>tipSpeed <input id="tip" type="range" min="0" max="25" step="0.5" value="0" /> <output id="tip-out">0</output></label>
+        <button id="sweep" type="button">Swing sweep (0 &rarr; 22 &rarr; 0, 300 ms)</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>One-shots</h2>
+      <div class="buttons" id="buttons"></div>
+    </section>
+
+    <section>
+      <h2>Mix</h2>
+      <div class="row">
+        <label>volume <input id="volume" type="range" min="0" max="1" step="0.05" value="1" /></label>
+        <label><input id="mute" type="checkbox" /> mute</label>
+        <label>duck <input id="duck" type="range" min="0" max="1" step="0.05" value="1" /></label>
+        <label>intensity <input id="intensity" type="range" min="0" max="1" step="0.05" value="0" /></label>
+        <label><input id="ambience" type="checkbox" /> ambience</label>
+        <label><input id="paused" type="checkbox" /> setPaused</label>
+        <button id="suspend" type="button">suspend()</button>
+        <button id="resume" type="button">resume()</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Offline levels</h2>
+      <div class="row" style="margin-bottom: 8px">
+        <button id="measure" type="button">Render &amp; measure</button>
+      </div>
+      <pre id="levels">(not measured)</pre>
+    </section>
+
+    <script type="module" src="./audio-preview.ts"></script>
+  </body>
+</html>

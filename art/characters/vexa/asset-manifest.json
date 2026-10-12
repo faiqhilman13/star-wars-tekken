@@ -1,0 +1,50 @@
+{
+  "asset": "vexa",
+  "pipeline": "v5 anime (VRoid CC0 base)",
+  "generated": "2026-10-12T19:47:18",
+  "blender": "5.2.1 LTS",
+  "source": "art/characters/vexa/vexa_master.blend",
+  "file": "public/models/vexa.glb",
+  "bytes": 1390620,
+  "triangles": {
+    "GEO-vexa_body": 6588,
+    "GEO-vexa_hair": 349,
+    "GEO-vexa_coat": 7868,
+    "GEO-vexa_metal": 11892,
+    "GEO-vexa_trim": 3992,
+    "GEO-vexa_mask": 1088
+  },
+  "triangles_total": 31777,
+  "materials": [
+    "MAT-hair",
+    "MAT-vexa_metal",
+    "MAT-vexa_primary",
+    "MAT-vexa_secondary",
+    "MAT-vexa_trim",
+    "MAT-visor"
+  ],
+  "morphs": {
+    "GEO-vexa_body": [
+      "palmOpen"
+    ]
+  },
+  "armature_extras": {
+    "gripCentreN": [
+      0.0017,
+      -0.0422,
+      0.0068
+    ],
+    "gripCentreF": [
+      0.0017,
+      -0.0422,
+      -0.0068
+    ],
+    "gripRadius": 0.0215,
+    "gripAxis": "hand-local +z (game z at rest)"
+  },
+  "units": {
+    "up": "Y (glTF)",
+    "forward": "game +x",
+    "scale": 1.0
+  }
+}

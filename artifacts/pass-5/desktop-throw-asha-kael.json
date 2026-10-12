@@ -1,0 +1,147 @@
+{
+  "url": "http://127.0.0.1:5190",
+  "mode": "desktop",
+  "state": "throw.asha.kael.24",
+  "requestedState": "throw.asha.kael.24",
+  "appliedState": "throw.asha.kael.24",
+  "runId": "pass-5",
+  "seed": 7,
+  "screenshotPath": "artifacts/pass-5/desktop-throw-asha-kael.png",
+  "gpu": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3080 (0x0000220A) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (NVIDIA)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 254,
+    "colorBuckets": 362,
+    "metrics": {
+      "colorBuckets": 451,
+      "colorEntropyBits": 6.72,
+      "edgeDensity": 0.351,
+      "luminance": {
+        "mean": 78.2,
+        "p5": 25.2,
+        "p95": 159.5,
+        "contrast": 134.3
+      },
+      "dominantColorShare": 0.061,
+      "nonBackgroundShare": 0.939
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 65,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 235083,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 38,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 48,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "frame": 15,
+      "elapsed": 0.3128060000953674,
+      "score": 110,
+      "targetScore": 2040,
+      "complete": false,
+      "player": {
+        "position": {
+          "x": 1.4100000000000001,
+          "y": 0,
+          "z": 0
+        },
+        "speed": 0
+      },
+      "renderer": {
+        "calls": 65,
+        "triangles": 235083,
+        "geometries": 38,
+        "textures": 48
+      },
+      "canvas": {
+        "clientWidth": 1280,
+        "clientHeight": 720,
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "game": {
+        "mode": "cpu",
+        "screen": "fight",
+        "phase": "fight",
+        "round": 1,
+        "seconds": 99,
+        "quality": "high",
+        "paused": false,
+        "select": null,
+        "fighters": [
+          {
+            "char": "asha",
+            "x": 1.41,
+            "y": 0,
+            "state": "throwing",
+            "move": null,
+            "clip": null,
+            "health": 1000,
+            "maxHealth": 1000,
+            "meter": 15,
+            "rounds": 0,
+            "facing": 1
+          },
+          {
+            "char": "kael",
+            "x": 0.25,
+            "y": 0.123,
+            "state": "airHit",
+            "move": null,
+            "clip": null,
+            "health": 910,
+            "maxHealth": 1020,
+            "meter": 12,
+            "rounds": 0,
+            "facing": 1
+          }
+        ],
+        "events": {}
+      }
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "consoleErrorCount": 0,
+  "pageErrorCount": 0
+}

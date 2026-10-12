@@ -1,0 +1,147 @@
+{
+  "url": "http://127.0.0.1:5190",
+  "mode": "mobile",
+  "state": "exchange.vexa.asha",
+  "requestedState": "exchange.vexa.asha",
+  "appliedState": "exchange.vexa.asha",
+  "runId": "pass-5",
+  "seed": 7,
+  "screenshotPath": "artifacts/pass-5/mobile-exchange-vexa-asha.png",
+  "gpu": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3080 (0x0000220A) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (NVIDIA)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 80,
+      "width": 390,
+      "height": 305.4375
+    },
+    "drawingBuffer": {
+      "width": 585,
+      "height": 457
+    },
+    "alphaPixels": 4102,
+    "variance": 255,
+    "colorBuckets": 253,
+    "metrics": {
+      "colorBuckets": 367,
+      "colorEntropyBits": 6.24,
+      "edgeDensity": 0.377,
+      "luminance": {
+        "mean": 68.7,
+        "p5": 17.2,
+        "p95": 144,
+        "contrast": 126.8
+      },
+      "dominantColorShare": 0.067,
+      "nonBackgroundShare": 0.933
+    },
+    "renderBudget": {
+      "tier": "mobile",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 55,
+          "limit": 150,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 190961,
+          "limit": 300000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 43,
+          "limit": 200,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 56,
+          "limit": 40,
+          "ok": false
+        }
+      ],
+      "withinBudget": false
+    },
+    "diagnostics": {
+      "frame": 13,
+      "elapsed": 0.20941000009536742,
+      "score": 0,
+      "targetScore": 2000,
+      "complete": false,
+      "player": {
+        "position": {
+          "x": -1.0999999999999996,
+          "y": 0,
+          "z": 0
+        },
+        "speed": 3.0000000000000027
+      },
+      "renderer": {
+        "calls": 55,
+        "triangles": 190961,
+        "geometries": 43,
+        "textures": 56
+      },
+      "canvas": {
+        "clientWidth": 390,
+        "clientHeight": 305,
+        "width": 585,
+        "height": 457,
+        "dpr": 1.5
+      },
+      "game": {
+        "mode": "cpu",
+        "screen": "fight",
+        "phase": "fight",
+        "round": 1,
+        "seconds": 63,
+        "quality": "low",
+        "paused": false,
+        "select": null,
+        "fighters": [
+          {
+            "char": "vexa",
+            "x": -1.1,
+            "y": 0,
+            "state": "attack",
+            "move": "heavy",
+            "clip": null,
+            "health": 768,
+            "maxHealth": 1010,
+            "meter": 170,
+            "rounds": 1,
+            "facing": 1
+          },
+          {
+            "char": "asha",
+            "x": 1.596,
+            "y": 0,
+            "state": "idle",
+            "move": null,
+            "clip": null,
+            "health": 470,
+            "maxHealth": 1000,
+            "meter": 230,
+            "rounds": 0,
+            "facing": -1
+          }
+        ],
+        "events": {}
+      }
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "consoleErrorCount": 0,
+  "pageErrorCount": 0
+}

@@ -1,0 +1,344 @@
+{
+  "asset": "kael",
+  "generated": "2026-10-12T15:10:29",
+  "blender": "5.2.1 LTS",
+  "source": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\build\\cache\\kael_export.blend",
+  "target_engine": "three.js GLTFLoader (Saber Duel runtime)",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "authoring_up": "Z",
+    "authoring_forward": "+X",
+    "export_up": "Y",
+    "export_forward": "+Z",
+    "note": "glTF converts Z up to Y up; a subject facing -Y in Blender faces +Z in glTF"
+  },
+  "target_height_m": 1.9601,
+  "bounds_m": {
+    "min": [
+      -0.1481,
+      -0.2814,
+      0.001
+    ],
+    "max": [
+      0.2365,
+      0.2783,
+      1.9754
+    ],
+    "size": [
+      0.3846,
+      0.5597,
+      1.9743
+    ]
+  },
+  "files": {
+    "all": "C:/Users/User/PROJECTS/saber-duel/art/characters/kael\\exports\\kael.glb"
+  },
+  "lods": [
+    {
+      "level": 0,
+      "objects": [
+        "GEO-kael_body",
+        "GEO-kael_eyes",
+        "GEO-kael_brows",
+        "GEO-kael_lashes",
+        "GEO-kael_hair",
+        "GEO-kael_primary",
+        "GEO-kael_secondary",
+        "GEO-kael_trim",
+        "GEO-kael_leather",
+        "GEO-kael_metal"
+      ],
+      "tris": 45707
+    }
+  ],
+  "materials": [
+    "MAT-eyes",
+    "MAT-hair",
+    "MAT-kael_leather",
+    "MAT-kael_metal",
+    "MAT-kael_primary",
+    "MAT-kael_secondary",
+    "MAT-kael_trim",
+    "MAT-skin"
+  ],
+  "textures": [
+    {
+      "name": "skin_basecolor",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\skin_basecolor.webp"
+    },
+    {
+      "name": "skin_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\skin_normal.webp"
+    },
+    {
+      "name": "skin_orm",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\skin_orm.webp"
+    },
+    {
+      "name": "eyes",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\eyes.webp"
+    },
+    {
+      "name": "hair",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\hair.webp"
+    },
+    {
+      "name": "kael_primary_basecolor",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_primary_basecolor.webp"
+    },
+    {
+      "name": "kael_primary_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_primary_normal.webp"
+    },
+    {
+      "name": "kael_primary_orm",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_primary_orm.webp"
+    },
+    {
+      "name": "kael_secondary_basecolor",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_secondary_basecolor.webp"
+    },
+    {
+      "name": "kael_secondary_normal",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_secondary_normal.webp"
+    },
+    {
+      "name": "kael_secondary_orm",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_secondary_orm.webp"
+    },
+    {
+      "name": "kael_trim_basecolor",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_trim_basecolor.webp"
+    },
+    {
+      "name": "kael_trim_normal",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_trim_normal.webp"
+    },
+    {
+      "name": "kael_trim_orm",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_trim_orm.webp"
+    },
+    {
+      "name": "kael_leather_basecolor",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_leather_basecolor.webp"
+    },
+    {
+      "name": "kael_leather_normal",
+      "size": [
+        1024,
+        1024
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_leather_normal.webp"
+    },
+    {
+      "name": "kael_leather_orm",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_leather_orm.webp"
+    },
+    {
+      "name": "kael_metal_basecolor",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "sRGB",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_metal_basecolor.webp"
+    },
+    {
+      "name": "kael_metal_normal",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_metal_normal.webp"
+    },
+    {
+      "name": "kael_metal_orm",
+      "size": [
+        256,
+        256
+      ],
+      "colorspace": "Non-Color",
+      "packed": false,
+      "filepath": "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_metal_orm.webp"
+    }
+  ],
+  "texture_contract": {
+    "basecolor": "sRGB",
+    "normal": "Non-Color, tangent space, OpenGL +Y",
+    "roughness": "Non-Color",
+    "metallic": "Non-Color",
+    "ao": "Non-Color",
+    "packed_channels": "none by default; document any ORM packing here"
+  },
+  "skeleton": [
+    {
+      "armature": "ARM-kael",
+      "bones": 31,
+      "deform_bones": [
+        "hips",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "upperN",
+        "foreN",
+        "handN",
+        "upperF",
+        "foreF",
+        "handF",
+        "thighN",
+        "shinN",
+        "footN",
+        "thighF",
+        "shinF",
+        "footF",
+        "skirt_frontN_0",
+        "skirt_frontN_1",
+        "skirt_near_0",
+        "skirt_near_1",
+        "skirt_backN_0",
+        "skirt_backN_1",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_backF_0",
+        "skirt_backF_1",
+        "skirt_far_0",
+        "skirt_far_1",
+        "skirt_frontF_0",
+        "skirt_frontF_1"
+      ],
+      "roots": [
+        "hips"
+      ],
+      "rest_pose": "as exported"
+    }
+  ],
+  "sockets": [],
+  "colliders": [],
+  "animation_contract": "animation-contract.json",
+  "inferred_from_no_reference": [],
+  "dependencies": [
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\skin_basecolor.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\skin_normal.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\skin_orm.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\eyes.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\hair.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_primary_basecolor.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_primary_normal.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_primary_orm.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_secondary_basecolor.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_secondary_normal.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_secondary_orm.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_trim_basecolor.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_trim_normal.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_trim_orm.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_leather_basecolor.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_leather_normal.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_leather_orm.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_metal_basecolor.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_metal_normal.webp",
+    "C:\\Users\\User\\PROJECTS\\saber-duel\\art\\characters\\kael\\textures\\kael_metal_orm.webp"
+  ]
+}

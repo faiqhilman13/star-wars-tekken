@@ -1,0 +1,7 @@
+{
+  "asset": "kael",
+  "fps": 30,
+  "time_unit": "seconds from clip start",
+  "clips": [],
+  "note": "events come from pose markers on each action; loop/speed/root_motion from action custom properties"
+}

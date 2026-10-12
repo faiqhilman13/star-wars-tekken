@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arena Preview</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #000;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      #stats {
+        position: fixed;
+        left: 8px;
+        top: 8px;
+        color: #bfe;
+        font: 12px/1.35 monospace;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 4px 6px;
+        white-space: pre;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stats"></div>
+    <script type="module" src="./arena-preview.ts"></script>
+  </body>
+</html>

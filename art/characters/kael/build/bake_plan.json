@@ -1,0 +1,28 @@
+{
+  "targets": {
+    "GEO-kael_body": {"material": "MAT-skin", "maps": "basecolor,roughness,ao", "self_normal": true, "twin": true,
+                      "res": 2048, "data_size": 1024, "extrusion": 0.0015, "ray_dist": 0.003, "quality": 90},
+    "GEO-kael_primary": {"material": "MAT-kael_primary", "maps": "normal,ao,basecolor,roughness", "twin": false,
+                         "tint": true, "double_sided": true, "res": 2048, "normal_size": 2048, "data_size": 1024,
+                         "extrusion": 0.005, "ray_dist": 0.01, "quality": 88,
+                         "weave": {"period": 5.0, "strength": 0.35}},
+    "GEO-kael_secondary": {"material": "MAT-kael_secondary", "maps": "normal,ao,basecolor,roughness", "twin": false,
+                           "tint": true, "double_sided": true, "res": 1024, "normal_size": 1024, "data_size": 512,
+                           "extrusion": 0.004, "ray_dist": 0.008, "quality": 88,
+                           "weave": {"period": 4.0, "strength": 0.3}},
+    "GEO-kael_trim": {"material": "MAT-kael_trim", "maps": "normal,ao,basecolor,roughness", "twin": false,
+                      "tint": true, "double_sided": true, "res": 1024, "normal_size": 1024, "data_size": 512,
+                      "extrusion": 0.004, "ray_dist": 0.008, "quality": 88,
+                      "weave": {"period": 4.0, "strength": 0.35}},
+    "GEO-kael_leather": {"material": "MAT-kael_leather", "maps": "normal,ao,basecolor,roughness", "twin": false,
+                         "double_sided": true, "res": 1024, "normal_size": 1024, "data_size": 512,
+                         "extrusion": 0.004, "ray_dist": 0.008, "quality": 88},
+    "GEO-kael_metal": {"material": "MAT-kael_metal", "maps": "normal,ao,basecolor,roughness", "twin": false,
+                       "metallic_constant": 1.0, "res": 512, "normal_size": 512, "data_size": 256,
+                       "extrusion": 0.003, "ray_dist": 0.006, "quality": 90}
+  },
+  "convert": {
+    "GEO-kael_eyes": {"size": 512, "alpha": false},
+    "GEO-kael_hair": {"size": 2048, "alpha": true, "quality": 85}
+  }
+}

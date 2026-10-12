@@ -1,0 +1,58 @@
+{
+  "asset": "kael",
+  "pipeline": "v5 anime (VRoid CC0 base)",
+  "generated": "2026-10-12T17:28:18",
+  "blender": "5.2.1 LTS",
+  "source": "C:/Users/User/PROJECTS/saber-duel/art/characters/kael/kael_anime_a2.blend",
+  "file": "public/models/kael.glb",
+  "bytes": 2011512,
+  "triangles": {
+    "GEO-kael_body": 3248,
+    "GEO-kael_face": 3168,
+    "GEO-kael_hair": 9146,
+    "GEO-kael_costume": 12944
+  },
+  "triangles_total": 28506,
+  "materials": [
+    "MAT-eyes",
+    "MAT-face",
+    "MAT-hair",
+    "MAT-kael_leather",
+    "MAT-kael_primary",
+    "MAT-kael_secondary",
+    "MAT-kael_trim",
+    "MAT-skin"
+  ],
+  "morphs": {
+    "GEO-kael_body": [
+      "palmOpen"
+    ],
+    "GEO-kael_face": [
+      "expr_blink",
+      "expr_angry",
+      "expr_shout",
+      "expr_pain",
+      "expr_smile",
+      "expr_focus"
+    ]
+  },
+  "armature_extras": {
+    "gripCentreN": [
+      0.0023,
+      -0.0431,
+      0.0042
+    ],
+    "gripCentreF": [
+      0.0023,
+      -0.0431,
+      -0.0042
+    ],
+    "gripRadius": 0.0215,
+    "gripAxis": "hand-local +z (game z at rest)"
+  },
+  "units": {
+    "up": "Y (glTF)",
+    "forward": "game +x",
+    "scale": 1.0
+  }
+}

@@ -1,0 +1,32 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+.claude/
+
+# Third-party downloads (re-download: see README "Character art pipeline")
+art/vendor/
+
+# Blender caches, backups and intermediate / retired masters
+*.blend1
+art/characters/*/build/cache/
+art/characters/kael/kael_master.blend
+art/characters/kael/kael_baked.blend
+art/characters/kael/kael_anime_a2.blend
+art/characters/thane/thane_anime_a3.blend
+art/characters/asha/asha_master.blend
+art/characters/*/exports/retired/
+art/tmp/
+
+# Review renders: keep only the summary sheets
+art/characters/*/review/**
+!art/characters/*/review/**/
+!art/characters/*/review/**/sheet*.png
+
+# Evidence: keep the docs, the manifest and the latest pass only
+artifacts/*
+!artifacts/*.md
+!artifacts/evidence.json
+!artifacts/pass-5/

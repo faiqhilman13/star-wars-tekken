@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#07090d" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 27 26 5' stroke='%2346a3ff' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M6 5l20 22' stroke='%23ff3b3b' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <title>Saber Duel</title>
+  </head>
+  <body>
+    <main id="app" data-screen="title">
+      <canvas id="game-canvas" aria-label="Saber Duel arena"></canvas>
+      <div id="flash-overlay" aria-hidden="true"></div>
+      <div id="super-overlay" aria-hidden="true"></div>
+
+      <section id="hud" aria-live="polite">
+        <div class="hud-top">
+          <div class="fighter-panel" data-side="0">
+            <div class="name-row">
+              <span class="name">KAEL</span>
+              <span class="pips"><i></i><i></i></span>
+            </div>
+            <div class="health">
+              <div class="health-trail"></div>
+              <div class="health-fill"></div>
+              <div class="health-glint"></div>
+            </div>
+          </div>
+          <div class="timer-frame"><span id="timer">99</span></div>
+          <div class="fighter-panel" data-side="1">
+            <div class="name-row">
+              <span class="name">VEXA</span>
+              <span class="pips"><i></i><i></i></span>
+            </div>
+            <div class="health">
+              <div class="health-trail"></div>
+              <div class="health-fill"></div>
+              <div class="health-glint"></div>
+            </div>
+          </div>
+        </div>
+        <div class="meter" data-side="0">
+          <div class="meter-cells"><span><b></b></span><span><b></b></span><span><b></b></span></div>
+          <div class="meter-label"><span class="meter-count">0</span><span class="meter-hint">FORCE</span></div>
+        </div>
+        <div class="meter" data-side="1">
+          <div class="meter-cells"><span><b></b></span><span><b></b></span><span><b></b></span></div>
+          <div class="meter-label"><span class="meter-count">0</span><span class="meter-hint">FORCE</span></div>
+        </div>
+        <div class="callout" data-side="0"><strong></strong><span></span></div>
+        <div class="callout" data-side="1"><strong></strong><span></span></div>
+        <button id="pause-button" class="icon-button" type="button" aria-label="Pause">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></svg>
+        </button>
+      </section>
+
+      <div id="announcer" aria-live="assertive"><span class="announce-text"></span><span class="announce-sub"></span></div>
+
+      <section id="title-screen" class="screen" aria-label="Title">
+        <div class="title-block">
+          <div class="logo" aria-label="Saber Duel">
+            <span class="logo-saber blue" aria-hidden="true"></span>
+            <span class="logo-saber red" aria-hidden="true"></span>
+            <h1><span>SABER</span><span>DUEL</span></h1>
+          </div>
+          <p class="tagline">Four duelists. One bridge. Best of three.</p>
+        </div>
+        <nav class="menu" aria-label="Main menu">
+          <button class="menu-item" data-action="cpu" type="button"><span>VS CPU</span><small>Pick a duelist and an opponent</small></button>
+          <button class="menu-item" data-action="versus" type="button"><span>2 PLAYERS</span><small>Same keyboard or two pads</small></button>
+          <button class="menu-item" data-action="controls" type="button"><span>HOW TO FIGHT</span><small>Moves and controls</small></button>
+          <div class="difficulty" role="radiogroup" aria-label="CPU difficulty">
+            <span class="difficulty-label">CPU</span>
+            <button type="button" role="radio" data-difficulty="easy">EASY</button>
+            <button type="button" role="radio" data-difficulty="normal">NORMAL</button>
+            <button type="button" role="radio" data-difficulty="hard">HARD</button>
+          </div>
+        </nav>
+        <p class="press-hint"><span class="key-hint">ENTER</span> select · <span class="key-hint">↑↓</span> move</p>
+      </section>
+
+      <section id="select-screen" class="screen" aria-label="Choose your duelist">
+        <div class="select-head">
+          <h2>CHOOSE YOUR DUELIST</h2>
+          <p class="select-prompt"></p>
+        </div>
+        <div class="roster" role="listbox" aria-label="Fighters"></div>
+        <nav class="menu select-menu" aria-label="Select menu">
+          <button class="menu-item" data-action="back" type="button"><span>BACK</span></button>
+        </nav>
+      </section>
+
+      <section id="pause-screen" class="screen overlay" aria-label="Paused">
+        <h2>PAUSED</h2>
+        <nav class="menu" aria-label="Pause menu">
+          <button class="menu-item" data-action="resume" type="button"><span>RESUME</span></button>
+          <button class="menu-item" data-action="restart" type="button"><span>RESTART MATCH</span></button>
+          <button class="menu-item" data-action="controls" type="button"><span>HOW TO FIGHT</span></button>
+          <button class="menu-item" data-action="quit" type="button"><span>QUIT TO TITLE</span></button>
+        </nav>
+      </section>
+
+      <section id="controls-screen" class="screen overlay" aria-label="How to fight">
+        <h2>HOW TO FIGHT</h2>
+        <div class="controls-grid">
+          <div class="control-col">
+            <h3>Player 1</h3>
+            <dl>
+              <dt><kbd>A</kbd><kbd>D</kbd></dt><dd>Walk · double-tap to dash</dd>
+              <dt><kbd>W</kbd></dt><dd>Jump (forward/back with A/D)</dd>
+              <dt><kbd>S</kbd></dt><dd>Crouch</dd>
+              <dt><kbd>J</kbd></dt><dd>Light slash</dd>
+              <dt><kbd>K</kbd></dt><dd>Heavy slash</dd>
+              <dt><kbd>L</kbd></dt><dd>Special (1 bar)</dd>
+              <dt><kbd>I</kbd></dt><dd>Parry</dd>
+            </dl>
+          </div>
+          <div class="control-col">
+            <h3>Player 2</h3>
+            <dl>
+              <dt><kbd>←</kbd><kbd>→</kbd></dt><dd>Walk · double-tap to dash</dd>
+              <dt><kbd>↑</kbd></dt><dd>Jump</dd>
+              <dt><kbd>↓</kbd></dt><dd>Crouch</dd>
+              <dt><kbd>,</kbd></dt><dd>Light slash</dd>
+              <dt><kbd>.</kbd></dt><dd>Heavy slash</dd>
+              <dt><kbd>/</kbd></dt><dd>Special (1 bar)</dd>
+              <dt><kbd>;</kbd></dt><dd>Parry</dd>
+            </dl>
+          </div>
+          <div class="control-col techniques">
+            <h3>Techniques</h3>
+            <dl>
+              <dt>Parry</dt><dd>Tap Parry just before a hit: deflect it, stagger them, punish. Reflects Force waves.</dd>
+              <dt>Block</dt><dd>Hold away. Crouch-block lows, stand-block jump-ins.</dd>
+              <dt>Run</dt><dd>Double-tap forward and hold.</dd>
+              <dt>Throw</dt><dd>Light + Heavy up close. Press both to break.</dd>
+              <dt>Clash</dt><dd>Swing into their swing — blades lock and both reset.</dd>
+              <dt>Combo</dt><dd>Light, Light, Heavy. Heavy cuts through projectiles.</dd>
+              <dt>Super</dt><dd>Crouch + Special with 3 bars.</dd>
+            </dl>
+          </div>
+        </div>
+        <p class="controls-note">Specials: KAEL Force Push · VEXA Force Grip (mid-range choke) · ASHA Ataru Leap · THANE Staff Throw</p>
+        <p class="controls-note">Gamepads: stick/d-pad move · X light · Y heavy · B/RB special · A/LB parry · Start pause</p>
+        <p class="controls-note touch-note">Touch: drag the stick to walk, jump (up) and crouch (down) · SLASH · HEAVY · FORCE special · PARRY · GRAB throw · stick down + FORCE for the super</p>
+        <nav class="menu" aria-label="Back"><button class="menu-item" data-action="back" type="button"><span>BACK</span></button></nav>
+      </section>
+
+      <section id="result-screen" class="screen overlay" aria-label="Match result">
+        <p class="result-kicker">MATCH OVER</p>
+        <h2 class="result-title">KAEL WINS</h2>
+        <div class="result-stats"></div>
+        <nav class="menu" aria-label="Result menu">
+          <button class="menu-item" data-action="rematch" type="button"><span>REMATCH</span></button>
+          <button class="menu-item" data-action="select" type="button"><span>CHANGE FIGHTER</span></button>
+          <button class="menu-item" data-action="quit" type="button"><span>TITLE</span></button>
+        </nav>
+      </section>
+
+      <div id="touch-controls" aria-hidden="true">
+        <div id="touch-stick"><div id="touch-knob"></div></div>
+        <div class="touch-buttons">
+          <button class="touch-button heavy" data-buttons="heavy" type="button">HEAVY</button>
+          <button class="touch-button force" data-buttons="force" type="button">FORCE</button>
+          <button class="touch-button light" data-buttons="light" type="button">SLASH</button>
+          <button class="touch-button grab" data-buttons="light heavy" type="button">GRAB</button>
+          <button class="touch-button parry" data-buttons="parry" type="button">PARRY</button>
+        </div>
+      </div>
+      <button id="sound-button" class="icon-button" type="button" aria-label="Toggle sound" aria-pressed="false">
+        <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke-width="2" stroke-linecap="round" /></svg>
+        <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke-width="2" stroke-linecap="round" /></svg>
+      </button>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

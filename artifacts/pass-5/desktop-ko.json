@@ -1,0 +1,147 @@
+{
+  "url": "http://127.0.0.1:5190",
+  "mode": "desktop",
+  "state": "ko",
+  "requestedState": "ko",
+  "appliedState": "ko",
+  "runId": "pass-5",
+  "seed": 7,
+  "screenshotPath": "artifacts/pass-5/desktop-ko.png",
+  "gpu": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3080 (0x0000220A) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (NVIDIA)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 254,
+    "colorBuckets": 267,
+    "metrics": {
+      "colorBuckets": 311,
+      "colorEntropyBits": 6.18,
+      "edgeDensity": 0.356,
+      "luminance": {
+        "mean": 71,
+        "p5": 19.8,
+        "p95": 148.8,
+        "contrast": 128.9
+      },
+      "dominantColorShare": 0.092,
+      "nonBackgroundShare": 0.908
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 54,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 222775,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 37,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 56,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "frame": 13,
+      "elapsed": 0.23254200000000003,
+      "score": 104,
+      "targetScore": 2020,
+      "complete": false,
+      "player": {
+        "position": {
+          "x": -0.7899999999999999,
+          "y": 0,
+          "z": 0
+        },
+        "speed": 0
+      },
+      "renderer": {
+        "calls": 54,
+        "triangles": 222775,
+        "geometries": 37,
+        "textures": 56
+      },
+      "canvas": {
+        "clientWidth": 1280,
+        "clientHeight": 720,
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "game": {
+        "mode": "cpu",
+        "screen": "fight",
+        "phase": "roundOver",
+        "round": 1,
+        "seconds": 99,
+        "quality": "high",
+        "paused": false,
+        "select": null,
+        "fighters": [
+          {
+            "char": "kael",
+            "x": -0.79,
+            "y": 0,
+            "state": "victory",
+            "move": null,
+            "clip": null,
+            "health": 1020,
+            "maxHealth": 1020,
+            "meter": 16,
+            "rounds": 1,
+            "facing": 1
+          },
+          {
+            "char": "vexa",
+            "x": 2.642,
+            "y": 0,
+            "state": "ko",
+            "move": null,
+            "clip": null,
+            "health": 0,
+            "maxHealth": 1010,
+            "meter": 12,
+            "rounds": 0,
+            "facing": -1
+          }
+        ],
+        "events": {}
+      }
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "consoleErrorCount": 0,
+  "pageErrorCount": 0
+}

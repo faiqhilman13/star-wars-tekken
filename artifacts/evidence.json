@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "runId": "pass-5",
+  "captures": [
+    {
+      "mode": "desktop",
+      "state": "title",
+      "report": "artifacts/pass-5/desktop-title.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "select",
+      "report": "artifacts/pass-5/desktop-select.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "active-play",
+      "report": "artifacts/pass-5/desktop-active-play.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "exchange.asha.thane",
+      "report": "artifacts/pass-5/desktop-exchange-asha-thane.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "parry",
+      "report": "artifacts/pass-5/desktop-parry.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "throw.asha.kael.24",
+      "report": "artifacts/pass-5/desktop-throw-asha-kael.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "chain.kael.vexa.5",
+      "report": "artifacts/pass-5/desktop-chain-kael-vexa.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "clash.thane.asha",
+      "report": "artifacts/pass-5/desktop-clash-thane-asha.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "grip",
+      "report": "artifacts/pass-5/desktop-grip.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "lightning",
+      "report": "artifacts/pass-5/desktop-lightning.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "staff",
+      "report": "artifacts/pass-5/desktop-staff.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "leap",
+      "report": "artifacts/pass-5/desktop-leap.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "super",
+      "report": "artifacts/pass-5/desktop-super.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "ko",
+      "report": "artifacts/pass-5/desktop-ko.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "pause",
+      "report": "artifacts/pass-5/desktop-pause.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "result",
+      "report": "artifacts/pass-5/desktop-result.json"
+    },
+    {
+      "mode": "mobile",
+      "state": "select",
+      "report": "artifacts/pass-5/mobile-select.json"
+    },
+    {
+      "mode": "mobile",
+      "state": "exchange.vexa.asha",
+      "report": "artifacts/pass-5/mobile-exchange-vexa-asha.json"
+    },
+    {
+      "mode": "mobile",
+      "state": "title",
+      "report": "artifacts/pass-5/mobile-title.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "active-play.asha.thane",
+      "report": "artifacts/pass-5/desktop-active-play-asha-thane.json"
+    },
+    {
+      "mode": "desktop",
+      "state": "active-play.vexa.kael",
+      "report": "artifacts/pass-5/desktop-active-play-vexa-kael.json"
+    }
+  ],
+  "artifacts": [
+    "artifacts/pass-5/motion-kael-vexa.webm",
+    "artifacts/pass-5/motion-asha-thane.webm"
+  ]
+}

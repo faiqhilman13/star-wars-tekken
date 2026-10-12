@@ -1,0 +1,147 @@
+{
+  "url": "http://127.0.0.1:5190",
+  "mode": "desktop",
+  "state": "staff",
+  "requestedState": "staff",
+  "appliedState": "staff",
+  "runId": "pass-5",
+  "seed": 7,
+  "screenshotPath": "artifacts/pass-5/desktop-staff.png",
+  "gpu": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3080 (0x0000220A) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (NVIDIA)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 255,
+    "colorBuckets": 288,
+    "metrics": {
+      "colorBuckets": 338,
+      "colorEntropyBits": 6.36,
+      "edgeDensity": 0.393,
+      "luminance": {
+        "mean": 84.1,
+        "p5": 22.5,
+        "p95": 207.5,
+        "contrast": 185
+      },
+      "dominantColorShare": 0.059,
+      "nonBackgroundShare": 0.941
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 58,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 220681,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 47,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 64,
+          "limit": 60,
+          "ok": false
+        }
+      ],
+      "withinBudget": false
+    },
+    "diagnostics": {
+      "frame": 14,
+      "elapsed": 0.22687400000000008,
+      "score": 55,
+      "targetScore": 2020,
+      "complete": false,
+      "player": {
+        "position": {
+          "x": -1.7,
+          "y": 0,
+          "z": 0
+        },
+        "speed": 0
+      },
+      "renderer": {
+        "calls": 58,
+        "triangles": 220681,
+        "geometries": 47,
+        "textures": 64
+      },
+      "canvas": {
+        "clientWidth": 1280,
+        "clientHeight": 720,
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "game": {
+        "mode": "cpu",
+        "screen": "fight",
+        "phase": "fight",
+        "round": 1,
+        "seconds": 99,
+        "quality": "high",
+        "paused": false,
+        "select": null,
+        "fighters": [
+          {
+            "char": "thane",
+            "x": -1.7,
+            "y": 0,
+            "state": "attack",
+            "move": "special",
+            "clip": null,
+            "health": 1000,
+            "maxHealth": 1000,
+            "meter": 209,
+            "rounds": 0,
+            "facing": 1
+          },
+          {
+            "char": "vexa",
+            "x": 1.7,
+            "y": 0,
+            "state": "hit",
+            "move": null,
+            "clip": null,
+            "health": 955,
+            "maxHealth": 1010,
+            "meter": 7,
+            "rounds": 0,
+            "facing": -1
+          }
+        ],
+        "events": {}
+      }
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "consoleErrorCount": 0,
+  "pageErrorCount": 0
+}

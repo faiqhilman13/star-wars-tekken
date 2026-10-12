@@ -1,0 +1,147 @@
+{
+  "url": "http://127.0.0.1:5190",
+  "mode": "desktop",
+  "state": "exchange.asha.thane",
+  "requestedState": "exchange.asha.thane",
+  "appliedState": "exchange.asha.thane",
+  "runId": "pass-5",
+  "seed": 7,
+  "screenshotPath": "artifacts/pass-5/desktop-exchange-asha-thane.png",
+  "gpu": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3080 (0x0000220A) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (NVIDIA)",
+    "softwareRendered": false
+  },
+  "result": {
+    "ok": true,
+    "reason": "nonblank",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "drawingBuffer": {
+      "width": 1280,
+      "height": 720
+    },
+    "alphaPixels": 4096,
+    "variance": 253,
+    "colorBuckets": 297,
+    "metrics": {
+      "colorBuckets": 373,
+      "colorEntropyBits": 6.43,
+      "edgeDensity": 0.391,
+      "luminance": {
+        "mean": 83,
+        "p5": 24.4,
+        "p95": 190.1,
+        "contrast": 165.7
+      },
+      "dominantColorShare": 0.084,
+      "nonBackgroundShare": 0.916
+    },
+    "renderBudget": {
+      "tier": "desktop",
+      "note": "starting-point budget; adjust per game and document overrides",
+      "rows": [
+        {
+          "metric": "calls",
+          "actual": 67,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "triangles",
+          "actual": 232521,
+          "limit": 750000,
+          "ok": true
+        },
+        {
+          "metric": "geometries",
+          "actual": 45,
+          "limit": 300,
+          "ok": true
+        },
+        {
+          "metric": "textures",
+          "actual": 56,
+          "limit": 60,
+          "ok": true
+        }
+      ],
+      "withinBudget": true
+    },
+    "diagnostics": {
+      "frame": 17,
+      "elapsed": 0.31150200009536727,
+      "score": 0,
+      "targetScore": 2000,
+      "complete": false,
+      "player": {
+        "position": {
+          "x": -1.2499999999999998,
+          "y": 0,
+          "z": 0
+        },
+        "speed": 3.0000000000000027
+      },
+      "renderer": {
+        "calls": 67,
+        "triangles": 232521,
+        "geometries": 45,
+        "textures": 56
+      },
+      "canvas": {
+        "clientWidth": 1280,
+        "clientHeight": 720,
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "game": {
+        "mode": "cpu",
+        "screen": "fight",
+        "phase": "fight",
+        "round": 1,
+        "seconds": 63,
+        "quality": "high",
+        "paused": false,
+        "select": null,
+        "fighters": [
+          {
+            "char": "asha",
+            "x": -1.25,
+            "y": 0,
+            "state": "attack",
+            "move": "heavy",
+            "clip": null,
+            "health": 760,
+            "maxHealth": 1000,
+            "meter": 170,
+            "rounds": 1,
+            "facing": 1
+          },
+          {
+            "char": "thane",
+            "x": 1.586,
+            "y": 0,
+            "state": "idle",
+            "move": null,
+            "clip": null,
+            "health": 470,
+            "maxHealth": 1000,
+            "meter": 230,
+            "rounds": 0,
+            "facing": -1
+          }
+        ],
+        "events": {}
+      }
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "consoleErrorCount": 0,
+  "pageErrorCount": 0
+}
